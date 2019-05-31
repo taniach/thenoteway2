@@ -150,11 +150,11 @@ export default {
 
 <style scoped>
 .display-1 {
-    color: #FF00AC;
+    color: #ff00ac;
 }
 
 #see-more {
-    background-color: #FF00AC;
+    background-color: #ff00ac;
     margin-bottom: 30px;
 }
 
