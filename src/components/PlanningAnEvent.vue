@@ -70,12 +70,14 @@ export default {
     padding-bottom: 30px;
 }
 
-#row-of-three {
-    margin-left: 80px;
-    margin-right: 80px;
-}
-
 .container {
     background-color: #e9e9e9;
+}
+
+@media screen and (min-width: 800px) {
+    #row-of-three {
+        margin-left: 80px;
+        margin-right: 80px;
+    }
 }
 </style>
