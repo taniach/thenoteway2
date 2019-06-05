@@ -1,7 +1,7 @@
 <template>
     <v-container grid-list-lg>
         <v-layout row>
-            <v-flex xs12 class="text-xs-center display-1 font-weight-black my-5">
+            <v-flex xs12 text-xs-center display-1 font-weight-black my-5>
                 <img src="@/assets/chat-speech-bubbles.png" id="blog-icon" />
                 Blog
             </v-flex>
@@ -12,7 +12,7 @@
                     <v-img :src="require('@/assets/'+blog.image)" height="200px">
                     </v-img>
                 </v-card>
-                <div class="text-lg-left">
+                <div text-lg-left>
                     <div class="category">{{blog.category}}</div>
                     <div class="title">{{blog.title}}</div>
                 </div>

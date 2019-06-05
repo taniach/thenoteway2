@@ -1,7 +1,7 @@
 <template>
     <v-container fluid grid-list-lg>
         <v-layout row>
-            <v-flex xs12 class="text-xs-center display-1 font-weight-black my-5">
+            <v-flex xs12 text-xs-center display-1 font-weight-black my-5>
                 <img src="@/assets/multiple-users-silhouette.png" id="users" />
                 Planning An Event
             </v-flex>

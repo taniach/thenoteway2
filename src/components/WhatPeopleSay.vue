@@ -1,7 +1,7 @@
 <template>
     <v-container grid-list-lg class="peoplesay">
         <v-layout row>
-            <v-flex xs12 class="text-xs-center display-1 font-weight-black my-5">
+            <v-flex xs12 text-xs-center display-1 font-weight-black my-5>
                 <img src="@/assets/quote.png" id="talk" />
                 What People Say
             </v-flex>
