@@ -14,13 +14,64 @@ export default new Router({
             component: Home
         },
         {
-            path: '/about',
-            name: 'about',
-            // route level code-splitting
-            // this generates a separate chunk (about.[hash].js) for this route
-            // which is lazy-loaded when the route is visited.
-            component: () =>
-                import(/* webpackChunkName: "about" */ './views/About.vue')
+            path: '/contact',
+            name: 'contact',
+            component: () => import('./views/Contact.vue')
+        },
+        {
+            path: '/book-now',
+            name: 'book-now',
+            component: () => import('./views/BookNow.vue')
+        },
+        {
+            path: '/login',
+            name: 'login',
+            component: () => import('./views/Login.vue')
+        },
+        {
+            path: '/blog',
+            name: 'blog',
+            component: () => import('./views/Blog.vue')
+        },
+        {
+            path: '/art-jamming-with-a-twist',
+            name: 'art-jamming-with-a-twist',
+            component: () => import('./views/ArtJammingWithATwist.vue')
+        },
+        {
+            path: '/clay-workshop',
+            name: 'clay-workshop',
+            component: () => import('./views/ClayWorkshop.vue')
+        },
+        {
+            path: '/corporate-team-bonding',
+            name: 'corporate-team-bonding',
+            component: () => import('./views/CorporateTeamBonding.vue')
+        },
+        {
+            path: '/just-the-venue',
+            name: 'just-the-venue',
+            component: () => import('./views/JustTheVenue.vue')
+        },
+        {
+            path: '/paper-quilling-workshop',
+            name: 'paper-quilling-workshop',
+            component: () => import('./views/PaperQuilling.vue')
+        },
+        {
+            path: '/sand-art-workshop',
+            name: 'sand-art-workshop',
+            component: () => import('./views/SandArtWorkshop.vue')
+        },
+        {
+            path: '/birthday-parties',
+            name: 'birthday-parties',
+            component: () => import('./views/BirthdayParties.vue')
+        },
+        {
+            path: '/catering',
+            name: 'catering',
+            component: () => import('./views/Catering.vue')
         }
     ]
 });

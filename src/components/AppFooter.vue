@@ -15,12 +15,14 @@
         <span id="icons">
           <v-btn
             v-for="icon in icons"
-            :key="icon"
+            :key="icon.icon"
             class="mx-3"
             dark
             icon
+            target="_blank"
+            :href="'//'+icon.link"
           >
-            <v-icon size="24px" :class="social">{{ icon }}</v-icon>
+            <v-icon size="24px" :class="social">{{ icon.icon }}</v-icon>
           </v-btn>
         </span>
       </v-card-title>
@@ -37,9 +39,9 @@ import '@fortawesome/fontawesome-free/css/all.css';
   export default {
     data: () => ({
       icons: [
-        'fab fa-facebook',
-        'fab fa-instagram',
-        'fab fa-youtube'
+        { icon: 'fab fa-facebook', link: 'www.facebook.com/thenotewayartstudio' },
+        { icon: 'fab fa-instagram', link: 'www.instagram.com/thenotewayartstudio' },
+        { icon: 'fab fa-youtube', link: 'www.youtube.com/channel/UCKkSNbGo7qpxu0Vcw761aSg' }
       ],
       social: "social-icon"
     })

@@ -20,23 +20,26 @@
                     <v-list-tile
                         v-for="subItem in item.items"
                         :key="subItem.title"
-                        @click=""
+                        @click="{}"
                     >
-                        <v-list-tile-content>
-                            <v-list-tile-title>{{ subItem.title }}</v-list-tile-title>
-                        </v-list-tile-content>
+                        <router-link :to="subItem.link" class="mobile-menu">
+                            <v-list-tile-content :to="subItem.link">
+                                <v-list-tile-title>{{ subItem.title }}</v-list-tile-title>
+                            </v-list-tile-content>
+                        </router-link>
                     </v-list-tile>
                 </v-list-group>
 
                 <v-list-tile
                     v-for="item in menuItems"
                     :key="item.title"
-                    @click=""
+                    @click="{}"
                 >
-
-                    <v-list-tile-content>
-                        <v-list-tile-title>{{ item.title }}</v-list-tile-title>
-                    </v-list-tile-content>
+                    <router-link :to="item.link" class="mobile-menu">
+                        <v-list-tile-content :to="item.link">
+                            <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+                        </v-list-tile-content>
+                    </router-link>
                 </v-list-tile>
             </v-list>
             
@@ -45,7 +48,9 @@
         <v-toolbar app color="#ffffff">
             <v-toolbar-side-icon class="hidden-md-and-up" @click="drawer = !drawer"></v-toolbar-side-icon>
             <v-spacer class="hidden-md-and-up"></v-spacer>
-            <v-toolbar-title><img src="@/assets/logo.png" id="navbar-logo"></v-toolbar-title>
+            <router-link to="/">
+                <v-toolbar-title to="/"><img src="@/assets/logo.png" id="navbar-logo"></v-toolbar-title>
+            </router-link>
 
             <v-menu offset-y class="hidden-sm-and-down">
                 <template v-slot:activator="{ on }">
@@ -55,9 +60,11 @@
                     <v-list-tile
                     v-for="(item, index) in activitiesItems"
                     :key="index"
-                    @click=""
+                    @click="{}"
                     >
-                    <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+                    <router-link :to="item.link" class="desktop-menu">
+                        <v-list-tile-title :to="item.link">{{ item.title }}</v-list-tile-title>
+                    </router-link>
                     </v-list-tile>
                 </v-list>
             </v-menu>
@@ -70,18 +77,20 @@
                     <v-list-tile
                     v-for="(item, index) in eventsItems"
                     :key="index"
-                    @click=""
+                    @click="{}"
                     >
-                    <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+                    <router-link :to="item.link" class="desktop-menu">
+                        <v-list-tile-title :to="item.link">{{ item.title }}</v-list-tile-title>
+                    </router-link>
                     </v-list-tile>
                 </v-list>
             </v-menu>
 
-            <v-btn flat class="hidden-sm-and-down custom-btn">Calendar</v-btn>
-            <v-btn flat class="hidden-sm-and-down custom-btn">Blog</v-btn>
-            <v-btn flat class="hidden-sm-and-down custom-btn">Contact</v-btn>
+            <v-btn flat class="hidden-sm-and-down custom-btn" to="/book-now">Book Now</v-btn>
+            <v-btn flat class="hidden-sm-and-down custom-btn" to="/blog">Blog</v-btn>
+            <v-btn flat class="hidden-sm-and-down custom-btn" to="/contact">Contact</v-btn>
             <v-spacer class="hidden-sm-and-down"></v-spacer>
-            <v-btn class="hidden-sm-and-down" id="login-btn" dark>Login</v-btn>
+            <v-btn class="hidden-sm-and-down" id="login-btn" dark to="/login">Login</v-btn>
         </v-toolbar>
     </span>
 </template>
@@ -97,43 +106,39 @@ export default {
                 {
                     title: 'Activities',
                     items: [
-                        { title: 'Art Jamming With A Twist' },
-                        { title: 'Sand Art Workshop' },
-                        { title: 'Paper Quilling Workshop' },
-                        { title: 'Clay Workshop' },
-                        { title: 'Kids ARTVenture Programme' }
+                        { title: 'Art Jamming With A Twist', link: '/art-jamming-with-a-twist' },
+                        { title: 'Sand Art Workshop', link: '/sand-art-workshop' },
+                        { title: 'Paper Quilling Workshop', link: '/paper-quilling-workshop' },
+                        { title: 'Clay Workshop', link: '/clay-workshop' }
                     ]
                 },
                 {
                     title: 'Events',
                     items: [
-                        { title: 'Corporate Team Bonding' },
-                        { title: 'Birthday Parties' },
-                        { title: 'Baby Showers' },
-                        { title: 'Just The Venue' },
-                        { title: 'Catering' }
+                        { title: 'Corporate Team Bonding', link: '/corporate-team-bonding' },
+                        { title: 'Birthday Parties', link: '/birthday-parties' },
+                        { title: 'Just The Venue', link: '/just-the-venue' },
+                        { title: 'Catering', link: '/catering' }
                     ]
                 },
             ],
             menuItems: [
-                { title: 'Calendar' },
-                { title: 'Blog' },
-                { title: 'Contact' },
-                { title: 'Login' }
+                { title: 'Book Now', link: '/book-now' },
+                { title: 'Blog', link: '/blog' },
+                { title: 'Contact', link: '/contact' },
+                { title: 'Login', link: '/login' }
             ],
             activitiesItems: [
-                { title: 'Art Jamming With A Twist' },
-                { title: 'Sand Art Workshop' },
-                { title: 'Paper Quilling Workshop' },
-                { title: 'Clay Workshop' },
-                { title: 'Kids ARTVenture Programme' }
+                { title: 'Art Jamming With A Twist', link: '/art-jamming-with-a-twist' },
+                { title: 'Sand Art Workshop', link: '/sand-art-workshop' },
+                { title: 'Paper Quilling Workshop', link: '/paper-quilling-workshop' },
+                { title: 'Clay Workshop', link: '/clay-workshop' }
             ],
             eventsItems: [
-                { title: 'Corporate Team Bonding' },
-                { title: 'Birthday Parties' },
-                { title: 'Baby Showers' },
-                { title: 'Just The Venue' },
-                { title: 'Catering' }
+                { title: 'Corporate Team Bonding', link: '/corporate-team-bonding' },
+                { title: 'Birthday Parties', link: '/birthday-parties' },
+                { title: 'Just The Venue', link: '/just-the-venue' },
+                { title: 'Catering', link: '/catering' }
             ]
         };
     }
@@ -162,4 +167,13 @@ img#navbar-logo {
     background-color: #F96900;
 }
 
+a.mobile-menu {
+    color: white;
+    text-decoration: none;
+}
+
+a.desktop-menu {
+    color: black;
+    text-decoration: none;
+}
 </style>
