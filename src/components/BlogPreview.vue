@@ -8,18 +8,28 @@
         </v-layout>
         <v-layout row wrap class="row-cards" id="row-of-three">
             <v-flex xs12 sm12 md4 v-for="blog in blogs" :key="blog.id">
-                <v-card>
-                    <v-img :src="require('@/assets/'+blog.image)" height="200px">
-                    </v-img>
-                </v-card>
+                <router-link to="/blog">
+                    <v-card hover to="/blog">
+                        <v-img :src="require('@/assets/'+blog.image)" height="200px">
+                        </v-img>
+                    </v-card>
+                </router-link>
                 <div text-lg-left>
-                    <div class="category">{{blog.category}}</div>
-                    <div class="title">{{blog.title}}</div>
+                    <router-link to="/blog">
+                        <div class="category" to="/blog">
+                            {{blog.category}}
+                        </div>
+                    </router-link>
+                    <router-link to="/blog">
+                        <div class="title" to="/blog">
+                            {{blog.title}}
+                        </div>
+                    </router-link>
                 </div>
             </v-flex>
         </v-layout>
         <div class="text-xs-center">
-            <v-btn large id="see-all" dark>See all ({{total}})</v-btn>
+            <v-btn large id="see-all" dark to="/blog">See all ({{total}})</v-btn>
         </div>
     </v-container>
 </template>
@@ -91,5 +101,18 @@ export default {
         margin-left: 80px;
         margin-right: 80px;
     }
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a#see-all:hover {
+    text-decoration: none;
 }
 </style>

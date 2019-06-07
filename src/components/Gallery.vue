@@ -10,7 +10,9 @@
             <instagram-feed></instagram-feed>
         </v-layout>
         <div class="text-xs-center">
-            <v-btn large id="see-more" dark>SEE MORE</v-btn>
+            <v-btn large id="see-more" dark target="_blank" href="//www.instagram.com/thenotewayartstudio">
+                SEE MORE
+            </v-btn>
         </div>
     </v-container>
 </template>

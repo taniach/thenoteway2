@@ -13,7 +13,7 @@
                     </v-img>
                 </v-card>
                 <div class="text-xs-center">
-                    <v-btn large class="see-more" dark>CORPORATE EVENTS</v-btn>
+                    <v-btn large class="see-more" dark to="/corporate-team-bonding">CORPORATE EVENTS</v-btn>
                 </div>
             </v-flex>
 
@@ -23,7 +23,7 @@
                     </v-img>
                 </v-card>
                 <div class="text-xs-center">
-                    <v-btn large class="see-more" dark>PARTIES</v-btn>
+                    <v-btn large class="see-more" dark to="/birthday-parties">PARTIES</v-btn>
                 </div>
             </v-flex>
 
@@ -33,7 +33,7 @@
                     </v-img>
                 </v-card>
                 <div class="text-xs-center">
-                    <v-btn large class="see-more" dark>JUST THE VENUE</v-btn>
+                    <v-btn large class="see-more" dark to="/just-the-venue">JUST THE VENUE</v-btn>
                 </div>
             </v-flex>
         </v-layout>

@@ -72,6 +72,11 @@ export default new Router({
             path: '/catering',
             name: 'catering',
             component: () => import('./views/Catering.vue')
+        },
+        {
+            path: '/activities',
+            name: 'activities',
+            component: () => import('./views/Activities.vue')
         }
     ]
 });
