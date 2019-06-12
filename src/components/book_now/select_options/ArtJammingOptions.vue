@@ -49,7 +49,7 @@
                 subtitle: '40 X 40cm  Stretched Canvas'
             }
         ],
-        items: [...Array(50).keys()].map(x => ++x)
+        items: [...Array(50+1).keys()]
       }
     }
   }
