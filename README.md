@@ -1,4 +1,4 @@
-# meal-prep
+# thenoteway2
 
 ## Project setup
 ```
